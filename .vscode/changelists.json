@@ -4,8 +4,7 @@
       "name": "Default",
       "files": [
         "script.js",
-        ".vscode/changelists.json",
-        "songs/hours.mp3"
+        ".vscode/changelists.json"
       ]
     }
   ],

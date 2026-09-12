@@ -20,7 +20,7 @@ const songs = [
     // { name: "Secrets", artist: "The Weeknd", src: "songs/secrets.mp3" },
     { name: "Speed Demon", artist: "Justin Bieber", src: "songs/speeddemon.mp3" },
     { name: "A Thousand Miles", artist: "Vanessa Carlton", src: "songs/thousand.mp3" },
-    { name: "wokeuplikethis", artist: "Lil Uzi Vert", src: "songs/wokeup.mp3" },
+    { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Cartiii", src: "songs/wokeup.mp3" },
     { name: "spd", artist: "Travis Scott", src: "songs/spd.mp3" }
 ];
 

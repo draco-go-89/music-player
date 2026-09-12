@@ -1,0 +1,78 @@
+const audio = document.getElementById("audio");
+const title = document.getElementById("title");
+const artist = document.getElementById("artist");
+const playBtn = document.getElementById("play");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+const progress = document.getElementById("progress");
+const volume = document.getElementById("volume");
+
+const songs = [
+    { name: "The way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
+    { name: "In Ankhon Ki Masthi Ki", artist: "Asha Bhosle", src: "songs/masthi.mp3" }, 
+    { name: "Scars", artist: "novulent", src: "songs/scars.mp3" },
+    { name: "Best Day Ever", artist: "Mac Miller", src: "songs/bestdayever.mp3" },
+    { name: "Fair Trade", artist: "Drake", src: "songs/fairtrade.mp3" },
+    { name: "Heartless", artist: "The Weeknd", src: "songs/heartless.mp3" },
+    { name: "I Like You", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
+    { name: "Run", artist: "Joji", src: "songs/run.mp3" },
+    { name: "Secrets", artist: "The Weeknd", src: "songs/secrets.mp3" },
+    { name: "Speed Demon", artist: "Justin Bieber", src: "songs/speeddemon.mp3" },
+    { name: "A Thousand Miles", artist: "Vanessa Carlton", src: "songs/thousand.mp3" },
+    { name: "wokeuplikethis", artist: "Lil Uzi Vert", src: "songs/wokeup.mp3" }
+];
+
+let songIndex = 0;
+let isPlaying = false;
+
+function loadSong(index) {
+    title.textContent = songs[index].name;
+    artist.textContent = songs[index].artist;
+    audio.src = songs[index].src;
+}
+
+function playSong() {
+    audio.play();
+    playBtn.innerHTML = "⏸️";
+    isPlaying = true;
+}
+
+function pauseSong() {
+    audio.pause();
+    playBtn.innerHTML = "▶️";
+    isPlaying = false;
+}
+
+function nextSong() {
+    songIndex = (songIndex + 1) % songs.length;
+    loadSong(songIndex);
+    playSong();
+}
+
+function prevSong() {
+    songIndex = (songIndex - 1) % songs.length;  // songIndex = (songIndex = 1 + songs.lenght) % songs.length;
+    loadSong(songIndex);
+    playSong(songIndex);
+    playSong();
+}
+
+playBtn.addEventListener("click", () => {
+    isPlaying ? pauseSong() : playSong();
+});
+
+nextBtn.addEventListener("click", nextSong);
+prevBtn.addEventListener("click", prevSong);
+
+audio.addEventListener("timeupdate", () => {
+    progress.value = (audio.currentTime / audio.duration) * 100;
+});
+
+progress.addEventListener("input", () => {
+    audio.currentTime = (progress.value / 100) * audio.duration;
+});
+
+volume.addEventListener("input", () => {
+    audio.volume = volume.value;
+});
+
+loadSong(songIndex);

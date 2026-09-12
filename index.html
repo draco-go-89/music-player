@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC PLAYER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="player">
+        <img src="images/image1.jpg" class="cover">
+        <!-- <p>Now Playing</p> -->
+        <h2 id="title">Song Title</h2>
+        <p id="artist">Artist Name</p>
+
+        <audio id="audio"></audio>
+
+        <div class="controls">
+            <button id="prev">⏮️</button>
+            <button id="play">▶️</button>
+            <button id="next">⏭️</button>
+        </div>
+
+        <div class="progress">
+            <i class="progress-icon">🎵</i>
+            <input type="range" id="progress" value="0">
+        </div>
+
+        <div class="volume">
+            <i class="vol-icon">🔊</i>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+        <footer>© 2026 Lubo Labao | All Rights Reserved</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

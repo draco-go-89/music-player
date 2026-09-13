@@ -12,7 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
+    background: #c0dffd;
 }
 
 .player {
@@ -21,7 +22,8 @@ body {
     border-radius: 10px;
     text-align: center;
     width: 320px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+    /* enable them by disabling comments to the first one, remove background in the body and enable the upper code linear gradient */
 }
 
 .cover {

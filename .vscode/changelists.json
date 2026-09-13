@@ -4,8 +4,7 @@
       "name": "Default",
       "files": [
         ".vscode/changelists.json",
-        "script.js",
-        "songs/kingofthefall.mp3"
+        "style.css"
       ]
     }
   ],

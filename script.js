@@ -15,6 +15,7 @@ const songs = [
     { name: "Fair Trade", artist: "OVO Drake", src: "songs/fairtrade.mp3" },
     { name: "Hours In Silence", artist: "Drake & 21 Savage", src: "songs/hours.mp3" },
     { name: "Heartless", artist: "The Weeknd", src: "songs/heartless.mp3" },
+    { name: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },
     { name: "Woke up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
     { name: "Run", artist: "Joji", src: "songs/run.mp3" },
     // { name: "Secrets", artist: "The Weeknd", src: "songs/secrets.mp3" },

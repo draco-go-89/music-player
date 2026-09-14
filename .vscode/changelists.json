@@ -3,8 +3,8 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
-        "script.js"
+        "style.css",
+        ".vscode/changelists.json"
       ]
     }
   ],

@@ -4,7 +4,9 @@
       "name": "Default",
       "files": [
         ".vscode/changelists.json",
-        "style.css"
+        "script.js",
+        "songs/secrets.mp3",
+        "songs/STFU.mp3"
       ]
     }
   ],

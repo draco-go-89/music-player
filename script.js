@@ -12,7 +12,7 @@ const songs = [
     { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthi.mp3" }, 
     { name: "Scars", artist: "novulent", src: "songs/scars.mp3" },
     // { name: "", artist: "", src: "songs/.mp3" },
-    { name: "Fair Trade", artist: "OVO Drake % Travis Scott", src: "songs/fairtrade.mp3" },
+    { name: "Fair Trade", artist: "OVO Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "spd", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "Hours In Silence", artist: "Drake & 21 Savage", src: "songs/hours.mp3" },
     { name: "Jenice STFU", artist: "Drake", src: "songs/STFU.mp3" },

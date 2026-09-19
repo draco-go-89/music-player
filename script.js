@@ -20,10 +20,10 @@ const songs = [
     { name: "Woke up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
     { name: "Run", artist: "Joji", src: "songs/run.mp3" },
     { name: "spd", artist: "Travis Scott", src: "songs/spd.mp3" },
+    { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthi.mp3" },
     // { name: "Speed Demon", artist: "Justin Bieber", src: "songs/speeddemon.mp3" },
     // { name: "A Thousand Miles", artist: "Vanessa Carlton", src: "songs/thousand.mp3" },
-    { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" },
-    { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthi.mp3" }
+    { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" }
 ];
 
 let songIndex = 0;

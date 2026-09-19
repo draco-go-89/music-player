@@ -3,8 +3,9 @@
     {
       "name": "Default",
       "files": [
+        ".vscode/changelists.json",
         "script.js",
-        "songs/The_Weeknd_-_I_Was_Never_There_feat._Gesaffelstein__Official_Audio_(256k).mp3"
+        "songs/masthi.mp3"
       ]
     }
   ],

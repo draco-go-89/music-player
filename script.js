@@ -9,8 +9,6 @@ const volume = document.getElementById("volume");
 
 const songs = [
     { name: "The way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
-    { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthi.mp3" },
-    { name: "Jab Koi Baat Bigad Jaaye", artist: "🍃", src: "songs/jabkoibat.mp3" },
     { name: "scars", artist: "novulent", src: "songs/scars.mp3" },
     { name: "Fair Trade", artist: "OVO Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "Hours In Silence", artist: "Drake & 21 Savage", src: "songs/hours.mp3" },
@@ -21,6 +19,8 @@ const songs = [
     { name: "Woke up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
     { name: "run", artist: "Joji", src: "songs/run.mp3" },
     { name: "spd", artist: "Travis Scott", src: "songs/spd.mp3" },
+    { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
+    { name: "Jab Koi Baat Bigad Jaaye", artist: "🍃", src: "songs/jabkoibat.mp3" },
     // { name: "Speed Demon", artist: "Justin Bieber", src: "songs/speeddemon.mp3" },
     // { name: "A Thousand Miles", artist: "Vanessa Carlton", src: "songs/thousand.mp3" },
     // { name: "", artist: "", src: "songs/.mp3" },

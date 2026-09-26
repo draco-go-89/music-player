@@ -25,7 +25,6 @@ const songs = [
     { name: "spd", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
     { name: "Jab Koi Baat Bigad Jaaye", artist: "🍃", src: "songs/jabkoibat.mp3" },
-    // { name: "Speed Demon", artist: "Justin Bieber", src: "songs/speeddemon.mp3" },
     // { name: "A Thousand Miles", artist: "Vanessa Carlton", src: "songs/thousand.mp3" },
     // { name: "", artist: "", src: "songs/.mp3" },
     { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" }

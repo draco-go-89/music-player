@@ -3,10 +3,11 @@
     {
       "name": "Default",
       "files": [
-        "script.js",
+        "images/image7.jpg",
         ".vscode/changelists.json",
-        "songs/ithink.mp3",
-        "songs/medicine.mp3"
+        "index.html",
+        "images/image5.jpg",
+        "images/image4.jpg"
       ]
     }
   ],

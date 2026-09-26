@@ -5,7 +5,8 @@
       "files": [
         ".vscode/changelists.json",
         "script.js",
-        "songs/night.mp3"
+        "songs/popular.mp3",
+        "songs/viah.mp3"
       ]
     }
   ],

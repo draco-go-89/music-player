@@ -3,10 +3,9 @@
     {
       "name": "Default",
       "files": [
+        "images/image3.jpg",
         ".vscode/changelists.json",
-        "script.js",
-        "songs/popular.mp3",
-        "songs/viah.mp3"
+        "index.html"
       ]
     }
   ],

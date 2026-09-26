@@ -3,11 +3,9 @@
     {
       "name": "Default",
       "files": [
-        "images/image7.jpg",
         ".vscode/changelists.json",
-        "index.html",
-        "images/image5.jpg",
-        "images/image4.jpg"
+        "images/image8.jpg",
+        "index.html"
       ]
     }
   ],

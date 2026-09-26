@@ -8,10 +8,11 @@ const progress = document.getElementById("progress");
 const volume = document.getElementById("volume");
 
 const songs = [
+    { name: "the night we met", artist: "14 sept", src: "songs/night.mp3" },
     { name: "The way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
     { name: "scars", artist: "novulent", src: "songs/scars.mp3" },
     { name: "Fair Trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
-    { name: "RICH BABY DADDY! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
+    { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
     { name: "Hours In Silence", artist: "Drake & 21 Savage", src: "songs/hours.mp3" },
     { name: "Jenice STFU", artist: "OVO Drake", src: "songs/STFU.mp3" },
     { name: "Sticky", artist: "Drake", src: "songs/sticky.mp3" },

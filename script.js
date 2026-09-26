@@ -24,6 +24,8 @@ const songs = [
     { name: "Crash First", artist: "mgk & honestav", src: "songs/crashmgk.mp3" },
     { name: "run", artist: "Joji", src: "songs/run.mp3" },
     { name: "Fuck L", artist: "XXXT & 3PPIE", src: "songs/fkluv.mp3" },
+    { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
+    { name: "ithinkimok", artist: "mgk", src: "songs/ithink.mp3" },
     { name: "spd", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "Viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },

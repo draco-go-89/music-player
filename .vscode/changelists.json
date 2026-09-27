@@ -4,8 +4,8 @@
       "name": "Default",
       "files": [
         ".vscode/changelists.json",
-        "index.html",
-        "images/image2.jpg"
+        "script.js",
+        "songs/lovememore.mp3"
       ]
     }
   ],

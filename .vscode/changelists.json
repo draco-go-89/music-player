@@ -3,9 +3,9 @@
     {
       "name": "Default",
       "files": [
+        "script.js",
         ".vscode/changelists.json",
-        "index.html",
-        "images/image9.jpg"
+        "index.html"
       ]
     }
   ],

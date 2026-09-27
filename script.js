@@ -8,7 +8,6 @@ const progress = document.getElementById("progress");
 const volume = document.getElementById("volume");
 
 const songs = [
-    { name: "the night we met", artist: "14 sept", src: "songs/night.mp3" },
     { name: "The way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
     { name: "scars", artist: "novulent", src: "songs/scars.mp3" },
     { name: "Fair Trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
@@ -29,7 +28,8 @@ const songs = [
     { name: "spd", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "Viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
-    { name: "Jab Koi Baat Bigad Jaaye", artist: "🍃", src: "songs/jabkoibat.mp3" },
+    // { name: "Jab Koi Baat Bigad Jaaye", artist: "🍃", src: "songs/jabkoibat.mp3" },
+    { name: "the night we met", artist: "14 sept", src: "songs/night.mp3" },
     // { name: "A Thousand Miles", artist: "Vanessa Carlton", src: "songs/thousand.mp3" },
     // { name: "", artist: "", src: "songs/.mp3" },
     { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" }

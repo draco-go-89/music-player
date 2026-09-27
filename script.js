@@ -15,6 +15,7 @@ const songs = [
     { name: "Hours In Silence", artist: "Drake & 21 Savage", src: "songs/hours.mp3" },
     { name: "Jenice STFU", artist: "OVO Drake", src: "songs/STFU.mp3" },
     { name: "Sticky", artist: "Drake", src: "songs/sticky.mp3" },
+    { name: "over my dead body", artist: "Drake", src: "songs/overmy.mp3" },
     { name: "I Was Never There", artist: "The Weekend", src: "songs/neverthere.mp3" },
     { name: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },
     { name: "Heartless", artist: "The Weeknd, Metro Boomin", src: "songs/heartless.mp3" },

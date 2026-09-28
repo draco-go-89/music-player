@@ -22,6 +22,7 @@ const songs = [
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
     { name: "Wake up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
     { name: "roses", artist: "the chainsmokers", src: "songs/roses.mp3" },
+    { name: "slut", artist: "taylor swift", src: "songs/slut.mp3" },
     // { name: "crash first", artist: "mgk & honestav", src: "songs/crashmgk.mp3" },
     // { name: "run", artist: "Joji", src: "songs/run.mp3" },
     { name: "lovememore", artist: "Trippie Redd", src: "songs/lovememore.mp3" },

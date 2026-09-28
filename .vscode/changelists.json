@@ -3,11 +3,12 @@
     {
       "name": "Default",
       "files": [
-        "script.js",
         ".vscode/changelists.json",
-        "songs/ithink.mp3",
-        "songs/jabkoibat.mp3",
-        "songs/thousand.mp3"
+        "script.js",
+        "songs/roses.mp3",
+        "songs/topfella.mp3",
+        "songs/myfault.mp3",
+        "songs/masthi.mp3"
       ]
     }
   ],

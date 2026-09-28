@@ -31,10 +31,10 @@ const songs = [
     { name: "Viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
     // { name: "Jab Koi Baat Bigad Jaaye", artist: "🍃", src: "songs/jabkoibat.mp3" },
-    { name: "the night we met", artist: "14 sept", src: "songs/night.mp3" },
+    { name: "the night we met", artist: "14 sept", src: "songs/night.mp3" }
     // { name: "A Thousand Miles", artist: "Vanessa Carlton", src: "songs/thousand.mp3" },
     // { name: "", artist: "", src: "songs/.mp3" },
-    { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" }
+    // { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" }
 ];
 
 let songIndex = 0;

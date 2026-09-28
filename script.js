@@ -8,31 +8,28 @@ const progress = document.getElementById("progress");
 const volume = document.getElementById("volume");
 
 const songs = [
-    { name: "The way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
+    { name: "the way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
     { name: "scars", artist: "novulent", src: "songs/scars.mp3" },
-    { name: "Fair Trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
+    { name: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
-    { name: "Hours In Silence", artist: "Drake & 21 Savage", src: "songs/hours.mp3" },
+    { name: "hours in silence", artist: "Drake & 21 Savage", src: "songs/hours.mp3" },
     { name: "Jenice STFU", artist: "OVO Drake", src: "songs/STFU.mp3" },
-    { name: "Sticky", artist: "Drake", src: "songs/sticky.mp3" },
+    { name: "sticky", artist: "Drake", src: "songs/sticky.mp3" },
     { name: "over my dead body", artist: "Drake", src: "songs/overmy.mp3" },
     { name: "I Was Never There", artist: "The Weekend", src: "songs/neverthere.mp3" },
     { name: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },
     { name: "Heartless", artist: "The Weeknd, Metro Boomin", src: "songs/heartless.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
-    { name: "Woke up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
+    { name: "Wake up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
     { name: "crash first", artist: "mgk & honestav", src: "songs/crashmgk.mp3" },
     { name: "run", artist: "Joji", src: "songs/run.mp3" },
     { name: "lovememore", artist: "Trippie Redd", src: "songs/lovememore.mp3" },
     { name: "fuck L", artist: "XXXT & 3PPIE", src: "songs/fkluv.mp3" },
     { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
-    { name: "ithinkimok", artist: "mgk", src: "songs/ithink.mp3" },
-    { name: "spd", artist: "Travis Scott", src: "songs/spd.mp3" },
-    { name: "Viah", artist: "Jass Manak", src: "songs/viah.mp3" },
+    { name: "sdp", artist: "Travis Scott", src: "songs/spd.mp3" },
+    { name: "viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     { name: "In Ankhon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
-    // { name: "Jab Koi Baat Bigad Jaaye", artist: "🍃", src: "songs/jabkoibat.mp3" },
     { name: "the night we met", artist: "14 sept", src: "songs/night.mp3" }
-    // { name: "A Thousand Miles", artist: "Vanessa Carlton", src: "songs/thousand.mp3" },
     // { name: "", artist: "", src: "songs/.mp3" },
     // { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" }
 ];

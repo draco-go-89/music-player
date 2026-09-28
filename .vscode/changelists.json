@@ -5,7 +5,9 @@
       "files": [
         "script.js",
         ".vscode/changelists.json",
-        "index.html"
+        "songs/ithink.mp3",
+        "songs/jabkoibat.mp3",
+        "songs/thousand.mp3"
       ]
     }
   ],

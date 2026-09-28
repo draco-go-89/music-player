@@ -3,12 +3,8 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
         "script.js",
-        "songs/roses.mp3",
-        "songs/topfella.mp3",
-        "songs/myfault.mp3",
-        "songs/masthi.mp3"
+        ".vscode/changelists.json"
       ]
     }
   ],

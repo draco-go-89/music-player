@@ -22,6 +22,7 @@ body {
     border-radius: 10px;
     text-align: center;
     width: 320px;
+    cursor: progress;
     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
     /* enable them by disabling comments to the first one, remove background in the body and enable the upper code linear gradient */
 }

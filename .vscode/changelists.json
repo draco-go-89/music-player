@@ -3,9 +3,8 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
-        "songs/pillowtalk.mp3",
-        "script.js"
+        "style.css",
+        ".vscode/changelists.json"
       ]
     }
   ],

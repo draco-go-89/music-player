@@ -32,6 +32,7 @@ body {
     height: 260px;
     /* object-fit: cover; */
     border-radius: 1px;
+    background-size: contain; /*can disable its useless */
 }
 
 footer {

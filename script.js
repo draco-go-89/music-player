@@ -29,6 +29,7 @@ const songs = [
     { name: "lovememore", artist: "Trippie Redd", src: "songs/lovememore.mp3" },
     // { name: "fuck L", artist: "xxxt", src: "songs/fkluv.mp3" },
     { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
+    { name: "my sexy g", artist: "r̥", src: "songs/kina.mp3" },
     { name: "sdp", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     { name: "topfella", artist: "karan aujla", src: "songs/topfella.mp3" },

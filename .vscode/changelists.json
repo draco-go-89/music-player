@@ -3,10 +3,8 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
-        "script.js",
-        "songs/blinding.mp3",
-        "songs/STFU.mp3"
+        "style.css",
+        ".vscode/changelists.json"
       ]
     }
   ],

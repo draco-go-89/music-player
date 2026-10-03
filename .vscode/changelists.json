@@ -3,8 +3,13 @@
     {
       "name": "Default",
       "files": [
-        "style.css",
-        ".vscode/changelists.json"
+        "songs/crashmgk.mp3",
+        "songs/run.mp3",
+        ".vscode/changelists.json",
+        "script.js",
+        "songs/nasx.mp3",
+        "songs/fkluv.mp3",
+        "songs/lovememore.mp3"
       ]
     }
   ],

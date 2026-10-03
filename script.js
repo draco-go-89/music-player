@@ -9,6 +9,7 @@ const volume = document.getElementById("volume");
 
 const songs = [
     { name: "the way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
+    { name: "thats what i want", artist: "2021 oct", src: "songs/nasx.mp3" },
     { name: "scars", artist: "novulent", src: "songs/scars.mp3" },
     { name: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
@@ -24,17 +25,12 @@ const songs = [
     { name: "roses", artist: "the chainsmokers", src: "songs/roses.mp3" },
     { name: "pillowtalk", artist: "zayn", src: "songs/pillowtalk.mp3" },
     { name: "slut", artist: "taylor swift", src: "songs/slut.mp3" },
-    // { name: "crash first", artist: "mgk & honestav", src: "songs/crashmgk.mp3" },
-    // { name: "run", artist: "Joji", src: "songs/run.mp3" },
-    { name: "lovememore", artist: "Trippie Redd", src: "songs/lovememore.mp3" },
-    // { name: "fuck L", artist: "xxxt", src: "songs/fkluv.mp3" },
     { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
     { name: "sdp", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     { name: "topfella", artist: "karan aujla", src: "songs/topfella.mp3" },
     { name: "inankhoonkimasthiki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
     { name: "the night we met", artist: "14 sept", src: "songs/night.mp3" }
-    // { name: "my fault", artist: "2019", src: "songs/myfault.mp3" }
     // { name: "", artist: "", src: "songs/.mp3" },
     // { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" }
 ];

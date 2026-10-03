@@ -13,11 +13,11 @@ body {
     justify-content: center;
     align-items: center;
     /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
-    background: #566773;
+    background: #1e3c72;
 }
 
 .player {
-    background: #566773;
+    background: #1e3c72;
     padding: 25px 30px;
     border-radius: 10px;
     text-align: center;

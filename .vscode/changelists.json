@@ -3,12 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "script.js",
-        ".vscode/changelists.json",
-        "songs/hours.mp3",
-        "songs/roses.mp3",
-        "songs/topfella.mp3",
-        "style.css"
+        "style.css",
+        ".vscode/changelists.json"
       ]
     }
   ],

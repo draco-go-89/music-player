@@ -18,12 +18,12 @@ body {
     align-items: center;
     /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
     /* background: url(images/image5.jpg) no-repeat center center fixed; */
-    background: #7e9696;
+    background: #2e5280;
 }
 
 .player {
     /* background: url(images/image5.jpg) no-repeat center center fixed; */
-    background: #7e9696;
+    background: #2e5280;
     padding: 25px 30px;
     border-radius: 10px;
     text-align: center;

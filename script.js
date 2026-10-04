@@ -13,7 +13,6 @@ const songs = [
     { name: "scars", artist: "novulent", src: "songs/scars.mp3" },
     { name: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
-    { name: "hours in silence", artist: "Drake & 21 Savage", src: "songs/hours.mp3" },
     { name: "sticky", artist: "Drake", src: "songs/sticky.mp3" },
     { name: "over my dead body", artist: "Drake", src: "songs/overmy.mp3" },
     { name: "I Was Never There", artist: "The Weekend", src: "songs/neverthere.mp3" },
@@ -22,13 +21,11 @@ const songs = [
     { name: "blinding lights", artist: "the weeknd", src: "songs/blinding.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
     { name: "Wake up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
-    { name: "roses", artist: "the chainsmokers", src: "songs/roses.mp3" },
     { name: "pillowtalk", artist: "zayn", src: "songs/pillowtalk.mp3" },
     { name: "slut", artist: "taylor swift", src: "songs/slut.mp3" },
     { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
     { name: "sdp", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "viah", artist: "Jass Manak", src: "songs/viah.mp3" },
-    { name: "topfella", artist: "karan aujla", src: "songs/topfella.mp3" },
     { name: "inankhoonkimasthiki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
     { name: "the night we met", artist: "14 sept", src: "songs/night.mp3" }
     // { name: "", artist: "", src: "songs/.mp3" },
@@ -63,9 +60,9 @@ function nextSong() {
 }
 
 function prevSong() {
-    songIndex = (songIndex - 1) % songs.length;  // songIndex = (songIndex = 1 + songs.lenght) % songs.length;
+    songIndex = (songIndex - 1 + songs.length) % songs.length;  // play previous even when the song is at the first index
     loadSong(songIndex);
-    playSong(songIndex);
+    // playSong(songIndex);
     playSong();
 }
 

@@ -9,8 +9,6 @@ const volume = document.getElementById("volume");
 
 const songs = [
     { name: "the way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
-    { name: "thats what i want", artist: "sept 2021", src: "songs/nasx.mp3" },
-    { name: "scars", artist: "novulent", src: "songs/scars.mp3" },
     { name: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
     { name: "sticky", artist: "Drake", src: "songs/sticky.mp3" },

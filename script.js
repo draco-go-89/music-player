@@ -19,7 +19,7 @@ const songs = [
     { name: "blinding lights", artist: "the weeknd", src: "songs/blinding.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
     { name: "Wake up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
-    { name: "apillinibiza", artist: "lifeisn'toveruntillitookapillinibiza", src: "songs/ibiza.mp3" },
+    { name: "apillinibiza", artist: "lifeisntoveruntillitookapillinibiza", src: "songs/ibiza.mp3" },
     { name: "pillowtalk", artist: "zayn", src: "songs/pillowtalk.mp3" },
     { name: "slut", artist: "taylor swift", src: "songs/slut.mp3" },
     { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },

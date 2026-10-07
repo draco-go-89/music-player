@@ -3,9 +3,9 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
         "script.js",
-        "songs/ibiza.mp3"
+        ".vscode/changelists.json",
+        "README.md"
       ]
     }
   ],

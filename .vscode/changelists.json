@@ -3,9 +3,10 @@
     {
       "name": "Default",
       "files": [
-        "script.js",
         ".vscode/changelists.json",
-        "README.md"
+        "script.js",
+        "songs/ashke.mp3",
+        "songs/sticky.mp3"
       ]
     }
   ],

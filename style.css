@@ -16,14 +16,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
-    /* background: url(images/image5.jpg) no-repeat center center fixed; */
-    background: #9cbbfc;
+    /* background-color: rgba(71, 162, 241, 0.454); */
+    background-attachment: fixed;
+    background-image: url('images/image6.jpg'), url('images/image0.jpg'), url('images/image2.jpg');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 29%, 30%, 28%;
+    background-position: bottom, top left, top right;
+    
+    /* background: #0c456b83; */
 }
 
 .player {
     /* background: url(images/image5.jpg) no-repeat center center fixed; */
-    background: #9cbbfc;
+    /* background: #AEAEDF; */
     padding: 25px 30px;
     border-radius: 10px;
     text-align: center;

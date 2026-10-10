@@ -20,8 +20,8 @@ body {
     background-attachment: fixed;
     background-image: url('images/image6.jpg'), url('images/image0.jpg'), url('images/image2.jpg'), url('images/image11.jpg'), url('images/drake.jpg');
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-    background-size: 29%, 30%, 30%, 34%, 29.4%;
-    background-position: 40px bottom, top left, right 30px bottom 100px, top right, 60% 86px ;
+    background-size: 29%, 30%, 30%, 34%, 29%;
+    background-position: 40px bottom, top left, right 30px bottom 100px, top right, 60% 17% ;
     /* background-position: bottom, top left, top right; */
     /* background: #0c456b83; */
 }

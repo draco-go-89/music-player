@@ -3,11 +3,9 @@
     {
       "name": "Default",
       "files": [
-        "songs/niagarafalls.mp3",
+        "images/limbu-and-mirchi.png",
         ".vscode/changelists.json",
-        "script.js",
-        "style.css",
-        "images/diya.gif"
+        "style.css"
       ]
     }
   ],

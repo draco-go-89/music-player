@@ -3,8 +3,11 @@
     {
       "name": "Default",
       "files": [
+        "songs/niagarafalls.mp3",
+        ".vscode/changelists.json",
+        "script.js",
         "style.css",
-        ".vscode/changelists.json"
+        "images/diya.gif"
       ]
     }
   ],

@@ -18,12 +18,13 @@ body {
     align-items: center;
     /* background-color: rgba(71, 162, 241, 0.454); */
     background-attachment: fixed;
-    background-image: url('images/image6.jpg'), url('images/image0.jpg'), url('images/image2.jpg'), url('images/image.jpg'), url('images/diya.gif'), url('images/limbu-and-mirchi.png');
+    background-image: url('images/image6.jpg'), url('images/image0.jpg'), url('images/image2.jpg'), url('images/image.jpg'), url('images/diya.gif'), url('images/limbu-and-mirchipng');
     background-repeat: no-repeat;
-    background-size: 29%, 30%, 25%, 34%, 28%, 11%;
-    background-position: 40px bottom, top 30px left, right 30px bottom 60px, top right, 79% 9%, top ;
+    background-size: 24%, 25%, 22%, 34%, 24%, 10%;
+    background-position: 10% bottom, top 7% left, right 0% bottom 10%, top right, 100% 5%, top ;
     /* background-position: bottom, top left, top right; */
     /* background: #0c456b83; */
+    overflow: hidden;
 }
 
 .player {
@@ -70,4 +71,44 @@ button {
     /* cursor: pointer; */
     margin-bottom: 6px;
     transition: all 9.9s ease;
+}
+
+/* NIMBU SWING*/
+.door-frame {
+    position: relative;
+    /* width: 100%; */
+    height: 400px;
+    background-color: #ffffff;
+    /* display: inline-flex; */
+}
+
+.nimbu {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    height: 700px;
+    margin-left: -60px;
+
+    background-image: url(images/limbu-and-mirchi.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    transform-origin: top center;
+    animation: swingBg 2.5s ease-in-out infinite;
+}
+
+@keyframes swingBg {
+    0% {
+        transform: rotate(12deg);
+    }
+
+    50% {
+        transform: rotate(-12deg);
+    }
+
+    100% {
+        transform: rotate(12deg);
+    }
 }

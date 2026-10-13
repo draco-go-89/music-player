@@ -3,9 +3,10 @@
     {
       "name": "Default",
       "files": [
-        "images/limbu-and-mirchi.png",
+        "images/spider3.png",
         ".vscode/changelists.json",
-        "style.css"
+        "style.css",
+        "index.html"
       ]
     }
   ],

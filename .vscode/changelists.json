@@ -3,10 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "images/spider3.png",
         ".vscode/changelists.json",
-        "style.css",
-        "index.html"
+        "style.css"
       ]
     }
   ],

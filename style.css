@@ -18,10 +18,10 @@ body {
     align-items: center;
     /* background-color: rgba(71, 162, 241, 0.454); */
     background-attachment: fixed;
-    background-image: url('images/image6.jpg'), url('images/image0.jpg'), url('images/image2.jpg'), url('images/image.jpg'), url('images/diya.gif'), url('images/limbu-and-mirchipng');
+    background-image: url('images/image6.jpg'), url('images/image0jpg'), url('images/image2.jpg'), url('images/image.jpg'), url('images/diya.gif'), url('images/limbu-and-mirchipng');
     background-repeat: no-repeat;
-    background-size: 24%, 25%, 22%, 34%, 24%, 10%;
-    background-position: 10% bottom, top 7% left, right 0% bottom 10%, top right, 100% 5%, top ;
+    background-size: 24%, 25%, 22%, 34%, 23%, 10%;
+    background-position: 10% bottom, top 7% left, right 0% bottom 10%, top right, 90% 15%, top ;
     /* background-position: bottom, top left, top right; */
     /* background: #0c456b83; */
     overflow: hidden;

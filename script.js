@@ -9,17 +9,21 @@ const volume = document.getElementById("volume");
 
 const songs = [
     { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
+    { name: "love me harder", artist: "The Weeknd, Ariana Grande", src: "songs/lovemeharder.mp3" },
     { name: "I Was Never There", artist: "The Weekend", src: "songs/neverthere.mp3" },
     { name: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },
+    { name: "Try Me", artist: "The Weeknd", src: "songs/tryme.mp3" },
     { name: "Heartless", artist: "The Weeknd, Metro Boomin", src: "songs/heartless.mp3" },
     { name: "starboy", artist: "The Weeknd", src: "songs/starboy.mp3" },
     { name: "blinding lights", artist: "the weeknd", src: "songs/blinding.mp3" },
     { name: "creepin", artist: "Metro Boomin, The Weeknd, 21 Savage", src: "songs/creepin.mp3" },
     { name: "the hills", artist: "the weeknd", src: "songs/thehills.mp3" },
     { name: "trance", artist: "Metro Boomin, Travis Scott", src: "songs/trance.mp3" },
+    { name: "pray for me", artist: "The Weeknd", src: "songs/prayforme.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
     { name: "the way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
     { name: "what did I miss", artist: "Drake", src: "songs/whatdidimiss.mp3" },
+    { name: "tossie slide", artist: "Drake", src: "songs/tossieslide.mp3" },
     { name: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
     { name: "sticky", artist: "Drake", src: "songs/sticky.mp3" },
@@ -28,9 +32,10 @@ const songs = [
     { name: "pill in ibiza", artist: "lifeisntoveruntillitookapillinibiza", src: "songs/ibiza.mp3" },
     { name: "pillowtalk", artist: "zayn", src: "songs/pillowtalk.mp3" },
     { name: "slut", artist: "taylor swift", src: "songs/slut.mp3" },
-    { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
+    { name: "My Eyes", artist: "Travis Scott", src: "songs/myeyes.mp3" },
     { name: "sdp", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "viah", artist: "Jass Manak", src: "songs/viah.mp3" },
+    { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
     { name: "inankhoonkimasthiki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" }
     // { name: "", artist: "", src: "songs/.mp3" },
     // { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" }

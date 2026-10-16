@@ -3,19 +3,13 @@
     {
       "name": "Default",
       "files": [
-        "songs/ashke.mp3",
-        "songs/overmy.mp3",
-        "songs/creepin.mp3",
+        "songs/tryme.mp3",
         ".vscode/changelists.json",
-        "songs/starboy.mp3",
-        "songs/whatdidimiss.mp3",
-        "songs/trance.mp3",
-        "songs/thehills.mp3",
-        "songs/redrum.mp3",
         "script.js",
-        "songs/night.mp3",
-        "index.html",
-        "style.css"
+        "songs/lovemeharder.mp3",
+        "songs/prayforme.mp3",
+        "songs/tossieslide.mp3",
+        "songs/myeyes.mp3"
       ]
     }
   ],

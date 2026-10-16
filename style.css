@@ -18,10 +18,10 @@ body {
     align-items: center;
     /* background-color: rgba(71, 162, 241, 0.454); */
     background-attachment: fixed;
-    background-image: url('images/girl3.png'), url('images/webpng'), url('images/flygirl.pn'), url('images/theweeknd2.png'), url('images/theweeknd3.jpg'), url('images/flysoul.png'), url('images/travispng');
+    background-image: url('images/girl3.png'), url('images/art1.png'), url('images/flygirl.pn'), url('images/theweeknd2.png'), url('images/theweeknd3.jpg'), url('images/flysoul.png'), url('images/travispng');
     background-repeat: no-repeat;
-    background-size: 35%, 40%, 15%, 30%, 32%, 11%, 20%;
-    background-position: left 1% bottom 10%, top 0% left 0%, left 40% top 2%, right 25% bottom 82%, 100% 100%, left 20% top 5%, right 0% bottom 30%;
+    background-size: 35%, 20%, 15%, 30%, 32%, 11%, 20%;
+    background-position: left 1% bottom 10%, top 0% right 5%, left 40% top 2%, right 25% bottom 82%, 100% 100%, left 20% top 5%, right 0% bottom 30%;
     /* background-position: bottom, top left, top right; */
     /* background: #0c456b83; */
     overflow: hidden;

@@ -4,8 +4,8 @@
       "name": "Default",
       "files": [
         ".vscode/changelists.json",
-        "style.css",
-        "images/art1.png"
+        "index.html",
+        "style.css"
       ]
     }
   ],

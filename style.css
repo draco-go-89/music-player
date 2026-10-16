@@ -120,3 +120,15 @@ button {
         transform: rotate(12deg);
     }
 }
+
+/* BUTTONS PLAY PAUSE NEXT PREV*/
+.btn-custom {
+  font-size: 22px;    
+  width: 30px;           /* Ensures equal width and height */
+  height: 30px;
+  display: inline-flex;  
+  align-items: center;
+  justify-content: center;
+  border: 1px  #cccccc00; 
+  cursor: pointer;
+}

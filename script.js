@@ -38,7 +38,6 @@ const songs = [
     { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
     { name: "inankhoonkimasthiki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" }
     // { name: "", artist: "", src: "songs/.mp3" },
-    // { name: "wokeuplikethis", artist: "Lil Uzi Vert & Playboi Carti", src: "songs/wokeup.mp3" }
 ];
 
 let songIndex = 0;

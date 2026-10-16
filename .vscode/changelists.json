@@ -3,9 +3,6 @@
     {
       "name": "Default",
       "files": [
-        "images/theweeknd.png",
-        ".vscode/changelists.json",
-        "style.css",
         "script.js"
       ]
     }

@@ -3,13 +3,10 @@
     {
       "name": "Default",
       "files": [
-        "songs/tryme.mp3",
+        "images/theweeknd.png",
         ".vscode/changelists.json",
-        "script.js",
-        "songs/lovemeharder.mp3",
-        "songs/prayforme.mp3",
-        "songs/tossieslide.mp3",
-        "songs/myeyes.mp3"
+        "style.css",
+        "script.js"
       ]
     }
   ],

@@ -3,9 +3,19 @@
     {
       "name": "Default",
       "files": [
+        "songs/ashke.mp3",
+        "songs/overmy.mp3",
+        "songs/creepin.mp3",
         ".vscode/changelists.json",
-        "style.css",
-        "script.js"
+        "songs/starboy.mp3",
+        "songs/whatdidimiss.mp3",
+        "songs/trance.mp3",
+        "songs/thehills.mp3",
+        "songs/redrum.mp3",
+        "script.js",
+        "songs/night.mp3",
+        "index.html",
+        "style.css"
       ]
     }
   ],

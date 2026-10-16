@@ -33,7 +33,7 @@ body {
     border-radius: 10px;
     text-align: center;
     width: 320px;
-    cursor: pointer;
+    /* cursor: pointer; */
     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
     /* enable them by disabling comments to the first one, remove background in the body and enable the upper code linear gradient */
 }
@@ -70,7 +70,7 @@ button {
     /* border: none; */
     /* padding: 2px 8px; */
     /* border-radius: 50%; */
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-bottom: 6px;
     /* transition: all 1.9s ease; */
 }

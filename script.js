@@ -15,7 +15,7 @@ const songs = [
     { name: "I Was Never There", artist: "The Weekend", src: "songs/neverthere.mp3" },
     { name: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },
     { name: "Heartless", artist: "The Weeknd, Metro Boomin", src: "songs/heartless.mp3" },
-    // { name: "blinding lights", artist: "the weeknd", src: "songs/blinding.mp3" },
+    { name: "blinding lights", artist: "the weeknd", src: "songs/blinding.mp3" },
     { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
     { name: "Wake up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },

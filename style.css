@@ -18,10 +18,10 @@ body {
     align-items: center;
     /* background-color: rgba(71, 162, 241, 0.454); */
     background-attachment: fixed;
-    background-image: url('images/image6.jpg'), url('images/image0jpg'), url('images/image2.jpg'), url('images/image.jpg'), url('images/diya.gif'), url('images/limbu-and-mirchipng');
+    background-image: url('images/girl3.png'), url('images/web.png'), url('images/flygirlpng'), url('images/liluzi.png'), url('images/theweeknd3.jpg'), url('images/flysoul.png'), url('images/travispng');
     background-repeat: no-repeat;
-    background-size: 24%, 25%, 22%, 34%, 23%, 10%;
-    background-position: 10% bottom, top 7% left, right 0% bottom 10%, top right, 90% 15%, top ;
+    background-size: 35%, 40%, 15%, 25%, 32%, 11%, 20%;
+    background-position: left 1% bottom 10% , top 0% left 0%, left 40% top 2%, right 5% bottom 95%, 100% 100%, left 40% bottom, right 0% bottom 30%;
     /* background-position: bottom, top left, top right; */
     /* background: #0c456b83; */
     overflow: hidden;
@@ -47,19 +47,21 @@ body {
 }
 
 footer {
-    font-size: 0.7ch;
+    font-size: 0.8ch;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
 h2 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
+    font-size: 22px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #000000;
 }
 
 p{
-    font-size: 0.9rem;
-    /* color: #fff; */
+    font-size: 14px;
+    color: #555555;
     margin-bottom: 8px;
 }
 
@@ -90,7 +92,7 @@ button {
     height: 700px;
     margin-left: -60px;
 
-    background-image: url(images/limbu-and-mirchi.png);
+    background-image: url(images/limbu-and-mirchipng);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: top center;

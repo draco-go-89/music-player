@@ -3,8 +3,21 @@
     {
       "name": "Default",
       "files": [
+        "images/drake.png",
         ".vscode/changelists.json",
-        "style.css"
+        "images/theweeknd2.png",
+        "style.css",
+        "images/theweeknd3.jpg",
+        "images/flysoul.png",
+        "images/girl3.png",
+        "images/liluzi.png",
+        "images/flygirl.png",
+        "images/earphone.png",
+        "images/image2.jpg",
+        "images/weeknd.jpg",
+        "images/travis.png",
+        "images/web.png",
+        "images/treeulta.png"
       ]
     }
   ],

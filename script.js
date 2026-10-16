@@ -8,16 +8,16 @@ const progress = document.getElementById("progress");
 const volume = document.getElementById("volume");
 
 const songs = [
-    { name: "the way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
-    { name: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
-    { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
-    { name: "sticky", artist: "Drake", src: "songs/sticky.mp3" },
+    { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
     { name: "I Was Never There", artist: "The Weekend", src: "songs/neverthere.mp3" },
     { name: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },
     { name: "Heartless", artist: "The Weeknd, Metro Boomin", src: "songs/heartless.mp3" },
     { name: "blinding lights", artist: "the weeknd", src: "songs/blinding.mp3" },
-    { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
+    { name: "the way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
+    { name: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
+    { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
+    { name: "sticky", artist: "Drake", src: "songs/sticky.mp3" },
     { name: "Wake up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
     { name: "pillinibiza", artist: "lifeisntoveruntillitookapillinibiza", src: "songs/ibiza.mp3" },
     { name: "pillowtalk", artist: "zayn", src: "songs/pillowtalk.mp3" },

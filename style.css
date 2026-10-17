@@ -18,7 +18,7 @@ body {
     align-items: center;
     /* background-color: rgba(71, 162, 241, 0.454); */
     background-attachment: fixed;
-    background-image: url('images/girl3.png'), url('images/art1.png'), url('images/flygirl.pn'), url('images/theweeknd2.png'), url('images/theweeknd3.jpg'), url('images/flysoul.png'), url('images/travispng');
+    background-image: url('images/girl3.png'), url('images/art1png'), url('images/flygirl.pn'), url('images/theweeknd2.png'), url('images/theweeknd3.jpg'), url('images/flysoul.png'), url('images/travispng');
     background-repeat: no-repeat;
     background-size: 35%, 16%, 15%, 30%, 32%, 10%, 20%;
     background-position: left 1% bottom 10%, top 15% left 40%, left 40% top 2%, right 25% bottom 82%, 100% 100%, left 20% top 5%, right 0% bottom 30%;

@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: "Lucida Calligraphy", "Apple Chancery", "Snell Roundhand", Arial; */
-    /* font-family: 'Times New Roman', Times, serif; */
     font-family: system-ui, -apple-system, sans-serif;
 }
 
@@ -119,4 +117,79 @@ button {
     100% {
         transform: rotate(12deg);
     }
+}
+/* FROM HERE THE ABOUT POP-UP */
+/* THE BUTTON IS HIDDEN AS A WHITE PNG BESIDE THE WEEKND BOTTOM */
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(images/);
+    z-index: 1000;
+    /* put it top of everything */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 3px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.image-button {
+    background: none;
+    border: none;
+    padding: 1px;
+    cursor: pointer;
+    outline: none;
+
+    position: fixed;
+    left: 60%;
+    bottom: 2%;
+    display: block;
+    position: absolute;
+}
+
+.image-button img {
+    width: 49%;
+}
+
+.image-button:active img {
+    transform: scale(0.95);
 }

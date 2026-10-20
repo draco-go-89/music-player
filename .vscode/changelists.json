@@ -3,19 +3,11 @@
     {
       "name": "Default",
       "files": [
-        "images/redflower.png",
         ".vscode/changelists.json",
+        "script.js",
+        "index.html",
         "style.css",
-        "images/theweeknd4.png",
-        "images/art1.png",
-        "images/drake.png",
-        "images/earphone.png",
-        "images/flygirl.png",
-        "images/image0.jpg",
-        "images/image11.jpg",
-        "images/image6.jpg",
-        "images/theweeknd.png",
-        "images/image11.png"
+        "images/white.png"
       ]
     }
   ],

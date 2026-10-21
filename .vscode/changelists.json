@@ -5,9 +5,7 @@
       "files": [
         ".vscode/changelists.json",
         "script.js",
-        "index.html",
-        "style.css",
-        "images/white.png"
+        "songs/viah.mp3"
       ]
     }
   ],

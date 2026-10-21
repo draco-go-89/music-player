@@ -8,6 +8,7 @@ const progress = document.getElementById("progress");
 const volume = document.getElementById("volume");
 
 const songs = [
+    { name: "This ain't Ordinary Life", artist: "The Weeknd", src: "songs/ordinarylife.mp3" },
     { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
     { name: "love me harder", artist: "The Weeknd, Ariana Grande", src: "songs/lovemeharder.mp3" },
     { name: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },

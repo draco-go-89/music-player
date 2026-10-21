@@ -8,7 +8,7 @@ const progress = document.getElementById("progress");
 const volume = document.getElementById("volume");
 
 const songs = [
-    { name: "This ain't Ordinary Life", artist: "The Weeknd", src: "songs/ordinarylife.mp3" },
+    { name: "Ordinary Life", artist: "The Weeknd", src: "songs/ordinarylife.mp3" },
     { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
     { name: "love me harder", artist: "The Weeknd, Ariana Grande", src: "songs/lovemeharder.mp3" },
     { name: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },
@@ -36,8 +36,8 @@ const songs = [
     { name: "sdp", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
-    { name: "inankhoonkimasthiki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" }
-    { name: "Thousand Miles", artist: "The Kid LAROI", src: "songs/thousandmiles.mp3" },
+    { name: "inankhoonkimasthiki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
+    { name: "Thousand Miles", artist: "The Kid LAROI", src: "songs/thousandmiles.mp3" }
     // { name: "", artist: "", src: "songs/.mp3" },
 ];
 

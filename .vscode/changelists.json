@@ -3,10 +3,8 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
         "script.js",
-        "songs/thousandmiles.mp3",
-        "songs/ibiza.mp3"
+        ".vscode/changelists.json"
       ]
     }
   ],

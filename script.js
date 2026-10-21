@@ -30,7 +30,6 @@ const songs = [
     { name: "sticky", artist: "Drake", src: "songs/sticky.mp3" },
     { name: "redrum", artist: "21 Savage", src: "songs/redrum.mp3" },
     { name: "Wake up in Japan", artist: "Post Malone, Doja Cat", src: "songs/ilikeyou.mp3" },
-    // { name: "pill in ibiza", artist: "lifeisntoveruntillitookapillinibiza", src: "songs/ibiza.mp3" },
     // { name: "pillowtalk", artist: "zayn", src: "songs/pillowtalk.mp3" },
     { name: "slut", artist: "taylor swift", src: "songs/slut.mp3" },
     { name: "My Eyes", artist: "Travis Scott", src: "songs/myeyes.mp3" },
@@ -38,6 +37,7 @@ const songs = [
     { name: "viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     { name: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
     { name: "inankhoonkimasthiki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" }
+    { name: "Thousand Miles", artist: "The Kid LAROI", src: "songs/thousandmiles.mp3" },
     // { name: "", artist: "", src: "songs/.mp3" },
 ];
 

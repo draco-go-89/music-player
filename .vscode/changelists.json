@@ -3,6 +3,7 @@
     {
       "name": "Default",
       "files": [
+        "page2.html",
         ".vscode/changelists.json",
         "index.html"
       ]

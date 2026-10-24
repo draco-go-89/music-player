@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Music Player</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #ffffff;
+            color: #26251f;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .player {
+            width: 100%;
+            max-width: 370px;
+            padding: 15px;
+            background: #faf9f5;
+            border: 1.5px solid #26251f;
+            border-radius: 17px;
+            box-shadow: 5px 5px 0 #26251f;
+            overflow: hidden;
+        }
+
+        .deck-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 13px;
+            font: 10px monospace;
+            letter-spacing: 1px;
+        }
+
+        .deck-number {
+            flex-shrink: 0;
+            padding: 5px 7px;
+            background: #f6d66a;
+            border: 1px solid #26251f;
+            border-radius: 4px;
+        }
+
+        /* COVER IMAGE */
+
+        .cover {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9px;
+            background: #f3d9c4;
+            background-image: url("images/girl3.png");
+            /* background-size: contain; */
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .cover-label {
+            position: absolute;
+            top: 11px;
+            left: 11px;
+            padding: 6px 8px;
+            background: white;
+            border: 1px solid #26251f;
+            border-radius: 4px;
+            font: 9px monospace;
+        }
+
+        .cover-number {
+            position: absolute;
+            right: 11px;
+            bottom: 11px;
+            font: 10px monospace;
+        }
+
+        /* VINYL */
+
+        .vinyl {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            border: 1px solid #26251f;
+            background: repeating-radial-gradient(circle,
+                    #e3a582 0px,
+                    #e3a582 3px,
+                    #f3c5a4 4px,
+                    #f3c5a4 6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vinyl-center {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: #f6d66a;
+            border: 1px solid #26251f;
+            font-size: 20px;
+        }
+
+        .cover.playing .vinyl {
+            animation: spin 8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* TRACK INFO */
+
+        .track-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 20px 1px 17px;
+        }
+
+        .track-details {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .track-title {
+            font-size: 23px;
+            letter-spacing: -0.8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .track-artist {
+            margin-top: 6px;
+            color: #96938b;
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .like {
+            flex-shrink: 0;
+            width: 39px;
+            height: 39px;
+            border: 1px solid #e8e5dd;
+            border-radius: 50%;
+            background: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .like.active {
+            color: #f47745;
+            background: #fff0e8;
+            border-color: #f47745;
+        }
+
+        /* PROGRESS */
+
+        .progress-area {
+            margin-bottom: 14px;
+        }
+
+        .progress {
+            display: block;
+            width: 100%;
+            height: 5px;
+            appearance: none;
+            border-radius: 10px;
+            background: #e8e5dd;
+            cursor: pointer;
+        }
+
+        .progress::-webkit-slider-thumb {
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #f47745;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #f47745;
+        }
+
+        .progress::-moz-range-thumb {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #f47745;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #f47745;
+        }
+
+        .time {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 9px;
+            color: #96938b;
+            font: 10px monospace;
+        }
+
+        /* CONTROLS */
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 13px;
+            margin: 19px 0;
+        }
+
+        .control {
+            width: 34px;
+            height: 38px;
+            border: none;
+            border-radius: 50%;
+            background: transparent;
+            color: #26251f;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .control.active {
+            color: #f47745;
+            background: #fff0e8;
+        }
+
+        .play {
+            width: 57px;
+            height: 57px;
+            border: 1.5px solid #26251f;
+            border-radius: 17px;
+            background: #f47745;
+            color: white;
+            box-shadow: 3px 3px 0 #26251f;
+            font-size: 21px;
+            cursor: pointer;
+        }
+
+        .volume {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-top: 13px;
+            border-top: 1px solid #e8e5dd;
+        }
+
+        .volume input {
+            flex: 1;
+            min-width: 0;
+            accent-color: #f47745;
+        }
+
+        .volume-value {
+            width: 30px;
+            text-align: right;
+            color: #96938b;
+            font: 10px monospace;
+        }
+
+        /* COLLECTION BUTTON */
+
+        .collection-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px 14px;
+            background: white;
+            border: 1px solid #26251f;
+            border-radius: 9px;
+            color: #26251f;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .collection-button span {
+            display: inline-block;
+        }
+
+        .collection-arrow {
+            transition: transform .2s;
+        }
+
+        .collection-button.open .collection-arrow {
+            transform: rotate(180deg);
+        }
+
+        /* HIDDEN COLLECTION */
+
+        .collection {
+            display: none;
+            margin-top: 9px;
+            max-height: 170px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .collection.open {
+            display: block;
+        }
+
+        .song {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            padding: 11px 9px;
+            border: 1px solid transparent;
+            border-bottom-color: #e8e5dd;
+            border-radius: 7px;
+            background: transparent;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .song.active {
+            background: #fff0e8;
+            border-color: #f47745;
+        }
+
+        .song-number {
+            width: 20px;
+            color: #96938b;
+            font: 11px monospace;
+        }
+
+        .song-info {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .song-name {
+            display: block;
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .song-artist {
+            display: block;
+            margin-top: 4px;
+            color: #96938b;
+            font-size: 10px;
+        }
+
+        .song-duration {
+            flex-shrink: 0;
+            color: #96938b;
+            font: 10px monospace;
+        }
+
+        @media (max-width: 350px) {
+            .player {
+                padding: 11px;
+            }
+
+            .cover {
+                height: 190px;
+            }
+
+            .controls {
+                gap: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="player">
+
+        <div class="deck-header">
+            <span>LUBO LABAO</span>
+            <span class="deck-number">PLAY</span>
+        </div>
+
+        <div class="cover" id="cover">
+
+            <div class="vinyl">
+                <div class="vinyl-center">♫</div>
+            </div>
+
+            <span class="cover-number" id="coverNumber">SIDE A · 01</span>
+        </div>
+
+        <div class="track-info">
+            <div class="track-details">
+                <h2 class="track-title" id="trackTitle">Niagara Falls</h2>
+                <p class="track-artist" id="trackArtist">
+                    Unknown Artist · Track 01
+                </p>
+            </div>
+
+            <button class="like" id="likeButton" aria-label="Like song">♡</button>
+        </div>
+
+        <div class="progress-area">
+            <input class="progress" id="progress" type="range" min="0" max="100" value="0" step="0.1">
+
+            <div class="time">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control" id="shuffleButton" title="Shuffle">⤨</button>
+            <button class="control" id="previousButton" title="Previous">◀|</button>
+            <button class="play" id="playButton" title="Play">▶</button>
+            <button class="control" id="nextButton" title="Next">|▶</button>
+            <button class="control" id="repeatButton" title="Repeat">↻</button>
+        </div>
+
+        <div class="volume">
+            <span>◖</span>
+            <input type="range" id="volume" min="0" max="1" value="1" step="0.01">
+            <span class="volume-value" id="volumeValue">100%</span>
+        </div>
+
+        <button class="collection-button" id="collectionButton" aria-expanded="false">
+            <span>COLLECTION · <span id="songCount">05</span> TRACKS</span>
+            <span class="collection-arrow">⌄</span>
+        </button>
+
+        <div class="collection" id="collection"></div>
+
+        <audio id="audio" preload="metadata"></audio>
+
+    </div>
+
+    <script>
+        /* EDIT YOUR SONGS HERE */
+
+        const songs = [
+            { title: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
+            { title: "love me harder", artist: "The Weeknd, Ariana Grande", src: "songs/lovemeharder.mp3" },
+            { title: "Ordinary Life", artist: "The Weeknd", src: "songs/ordinarylife.mp3" },
+            { title: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },
+            { title: "Try Me", artist: "The Weeknd", src: "songs/tryme.mp3" },
+            { title: "starboy", artist: "The Weeknd", src: "songs/starboy.mp3" },
+            { title: "blinding lights", artist: "the weeknd", src: "songs/blinding.mp3" },
+            { title: "creepin", artist: "Metro Boomin, The Weeknd, 21 Savage", src: "songs/creepin.mp3" },
+            { title: "the hills", artist: "the weeknd", src: "songs/thehills.mp3" },
+            { title: "trance", artist: "Metro Boomin, Travis Scott", src: "songs/trance.mp3" },
+            { title: "pray for me", artist: "The Weeknd", src: "songs/prayforme.mp3" },
+            { title: "I Was Never There", artist: "The Weekend", src: "songs/neverthere.mp3" },
+            { title: "Heartless", artist: "The Weeknd, Metro Boomin", src: "songs/heartless.mp3" },
+            { title: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
+            { title: "the way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
+            { title: "fashion killa", artist: "A$AP ROCKY", src: "songs/fashioonkilla.mp3" },
+            { title: "tossie slide", artist: "Drake", src: "songs/tossieslide.mp3" },
+            { title: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
+            { title: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
+            { title: "sticky", artist: "Drake", src: "songs/sticky.mp3" },
+            { title: "redrum", artist: "21 Savage", src: "songs/redrum.mp3" },
+            { title: "Wake up in Japan", artist: "Post Malone, Doja Cat", src: "songs/ilikeyou.mp3" },
+            // { title: "pillowtalk", artist: "zayn", src: "songs/pillowtalk.mp3" },
+            { title: "slut", artist: "taylor swift", src: "songs/slut.mp3" },
+            { title: "My Eyes", artist: "Travis Scott", src: "songs/myeyes.mp3" },
+            { title: "sdp", artist: "Travis Scott", src: "songs/spd.mp3" },
+            { title: "viah", artist: "Jass Manak", src: "songs/viah.mp3" },
+            { title: "medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
+            { title: "inankhoonkimasthiki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
+            { title: "Thousand Miles", artist: "The Kid LAROI", src: "songs/thousandmiles.mp3" }
+        ];
+
+        const audio = document.getElementById("audio");
+        const playButton = document.getElementById("playButton");
+        const progress = document.getElementById("progress");
+        const collection = document.getElementById("collection");
+        const collectionButton = document.getElementById("collectionButton");
+        const cover = document.getElementById("cover");
+
+        let currentIndex = 0;
+        let shuffle = false;
+        let repeat = false;
+        let seeking = false;
+        const liked = new Set();
+
+        function timeFormat(seconds) {
+            if (!Number.isFinite(seconds)) return "0:00";
+            return Math.floor(seconds / 60) + ":" +
+                String(Math.floor(seconds % 60)).padStart(2, "0");
+        }
+
+        /* BUILD COLLECTION */
+
+        function renderCollection() {
+            collection.replaceChildren();
+
+            songs.forEach((song, index) => {
+                const button = document.createElement("button");
+                button.className = "song";
+                button.type = "button";
+
+                const number = document.createElement("span");
+                number.className = "song-number";
+                number.textContent = String(index + 1).padStart(2, "0");
+
+                const info = document.createElement("span");
+                info.className = "song-info";
+
+                const name = document.createElement("span");
+                name.className = "song-name";
+                name.textContent = song.title;
+
+                const artist = document.createElement("span");
+                artist.className = "song-artist";
+                artist.textContent = song.artist;
+
+                const duration = document.createElement("span");
+                duration.className = "song-duration";
+                duration.textContent = "--:--";
+                duration.dataset.index = index;
+
+                info.append(name, artist);
+                button.append(number, info, duration);
+
+                button.addEventListener("click", () => {
+                    loadSong(index);
+                    playSong();
+                });
+
+                collection.appendChild(button);
+            });
+
+            document.getElementById("songCount").textContent =
+                String(songs.length).padStart(2, "0");
+
+            updateCollection();
+        }
+
+        /* COLLECTION OPEN/CLOSE */
+
+        collectionButton.addEventListener("click", () => {
+            const opened = collection.classList.toggle("open");
+
+            collectionButton.classList.toggle("open", opened);
+            collectionButton.setAttribute("aria-expanded", String(opened));
+        });
+
+        /* UPDATE SONG SELECTION */
+
+        function updateCollection() {
+            [...collection.children].forEach((button, index) => {
+                button.classList.toggle("active", index === currentIndex);
+            });
+        }
+
+        /* LOAD TRACK */
+
+        function loadSong(index) {
+            currentIndex = (index + songs.length) % songs.length;
+
+            audio.src = songs[currentIndex].src;
+            audio.load();
+
+            document.getElementById("trackTitle").textContent =
+                songs[currentIndex].title;
+
+            document.getElementById("trackArtist").textContent =
+                songs[currentIndex].artist + " · Track " +
+                String(currentIndex + 1).padStart(2, "0");
+
+            document.getElementById("coverNumber").textContent =
+                "SIDE A · " + String(currentIndex + 1).padStart(2, "0");
+
+            progress.value = 0;
+            document.getElementById("currentTime").textContent = "0:00";
+            document.getElementById("duration").textContent = "0:00";
+
+            updateCollection();
+            updateLike();
+        }
+
+        /* PLAYBACK */
+
+        async function playSong() {
+            try {
+                await audio.play();
+            } catch (error) {
+                console.warn("Check your audio file path:", songs[currentIndex].src);
+            }
+        }
+
+        function pauseSong() {
+            audio.pause();
+        }
+
+        playButton.addEventListener("click", () => {
+            if (audio.paused) playSong();
+            else pauseSong();
+        });
+
+        audio.addEventListener("play", () => {
+            playButton.textContent = "Ⅱ";
+            cover.classList.add("playing");
+        });
+
+        audio.addEventListener("pause", () => {
+            playButton.textContent = "▶";
+            cover.classList.remove("playing");
+        });
+
+        function nextSong() {
+            if (shuffle && songs.length > 1) {
+                let next;
+                do {
+                    next = Math.floor(Math.random() * songs.length);
+                } while (next === currentIndex);
+
+                loadSong(next);
+            } else {
+                loadSong(currentIndex + 1);
+            }
+
+            playSong();
+        }
+
+        function previousSong() {
+            if (audio.currentTime > 3) {
+                audio.currentTime = 0;
+            } else {
+                loadSong(currentIndex - 1);
+                playSong();
+            }
+        }
+
+        document.getElementById("nextButton").addEventListener("click", nextSong);
+        document.getElementById("previousButton").addEventListener("click", previousSong);
+
+        /* PROGRESS AND DURATION */
+
+        audio.addEventListener("timeupdate", () => {
+            if (!seeking && Number.isFinite(audio.duration) && audio.duration > 0) {
+                progress.value = audio.currentTime / audio.duration * 100;
+            }
+
+            document.getElementById("currentTime").textContent =
+                timeFormat(audio.currentTime);
+        });
+
+        audio.addEventListener("loadedmetadata", () => {
+            document.getElementById("duration").textContent =
+                timeFormat(audio.duration);
+
+            const duration = collection.querySelector(
+                `[data-index="${currentIndex}"]`
+            );
+
+            if (duration) duration.textContent = timeFormat(audio.duration);
+        });
+
+        progress.addEventListener("input", () => {
+            seeking = true;
+        });
+
+        progress.addEventListener("change", () => {
+            if (Number.isFinite(audio.duration) && audio.duration > 0) {
+                audio.currentTime = Number(progress.value) / 100 * audio.duration;
+            }
+
+            seeking = false;
+        });
+
+        /* VOLUME */
+
+        document.getElementById("volume").addEventListener("input", event => {
+            audio.volume = Number(event.target.value);
+
+            document.getElementById("volumeValue").textContent =
+                Math.round(audio.volume * 100) + "%";
+        });
+
+        audio.volume = 0.8;
+
+        /* SHUFFLE */
+
+        const shuffleButton = document.getElementById("shuffleButton");
+
+        shuffleButton.addEventListener("click", () => {
+            shuffle = !shuffle;
+            shuffleButton.classList.toggle("active", shuffle);
+        });
+
+        /* REPEAT CURRENT SONG */
+
+        const repeatButton = document.getElementById("repeatButton");
+
+        repeatButton.addEventListener("click", () => {
+            repeat = !repeat;
+            repeatButton.classList.toggle("active", repeat);
+        });
+
+        audio.addEventListener("ended", () => {
+            if (repeat) {
+                audio.currentTime = 0;
+                playSong();
+            } else {
+                nextSong();
+            }
+        });
+
+        /* LIKE TRACK */
+
+        function updateLike() {
+            const button = document.getElementById("likeButton");
+            const active = liked.has(currentIndex);
+
+            button.textContent = active ? "♥" : "♡";
+            button.classList.toggle("active", active);
+        }
+
+        document.getElementById("likeButton").addEventListener("click", () => {
+            if (liked.has(currentIndex)) liked.delete(currentIndex);
+            else liked.add(currentIndex);
+
+            updateLike();
+        });
+
+        /* KEYBOARD CONTROLS */
+
+        document.addEventListener("keydown", event => {
+            if (event.code === "Space" &&
+                !["INPUT", "BUTTON"].includes(document.activeElement.tagName)) {
+                event.preventDefault();
+                if (audio.paused) playSong();
+                else pauseSong();
+            }
+        });
+
+        renderCollection();
+        loadSong(0);
+    </script>
+
+</body>
+
+</html>

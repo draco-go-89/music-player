@@ -4,6 +4,8 @@
       "name": "Default",
       "files": [
         ".vscode/changelists.json",
+        "page2.html",
+        "index.html",
         "style.css"
       ]
     }

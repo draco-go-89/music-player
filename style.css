@@ -16,7 +16,7 @@ body {
     align-items: center;
     /* background-color: rgba(71, 162, 241, 0.454); */
     background-attachment: fixed;
-    background-image: url('images/girl3.png'), url('images/image11png'), url('images/flygirl.pn'), url('images/theweeknd4png'), url('images/theweeknd3.jpg'), url('images/flysoul.png'), url('images/redflower.png');
+    background-image: url('images/girl3png'), url('images/image11png'), url('images/flygirl.pn'), url('images/theweeknd4png'), url('images/theweeknd3.jpg'), url('images/flysoul.png'), url('images/redflower.png');
     background-repeat: no-repeat;
     background-size: 35%, 20%, 15%, 30%, 32%, 10%, 40%;
     background-position: left 1% bottom 10%, top 50% left 2%, left 40% top 2%, right 35% bottom 84%, 100% 100%, left 20% top 5%, right 0% top 0%;
@@ -200,29 +200,17 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-
+    
     width: 120px;
-    height: 120px;
+    height: 140px;
 
     transition: transform 0.2s ease opacity 0.2s ease;
     opacity: 0.9;
 }
 
-.textt {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    max-width: 90px;
-    height: auto;
-    padding: 4px 10px;
-    font-size: 10px;
-    font-weight: 400;
-    color: #000000;
-    text-decoration: none;
-    background-color: #ffffff00;
-    border: 1.2px solid #000000;
-    border-radius: 50px;
-    white-space: nowrap;
-
+.btn-four {
+    background-image: url('images/girl3.png');
+    left: 9%;
+    bottom: 7%;
+    background-size: 100%;
 }

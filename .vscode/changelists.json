@@ -3,9 +3,10 @@
     {
       "name": "Default",
       "files": [
-        "page2.html",
+        "index.html",
         ".vscode/changelists.json",
-        "index.html"
+        "style.css",
+        "images/girl.png"
       ]
     }
   ],

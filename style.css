@@ -204,7 +204,7 @@ button {
     width: 120px;
     height: 140px;
 
-    transition: transform 0.2s ease opacity 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 0.9;
 }
 

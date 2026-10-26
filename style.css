@@ -16,10 +16,10 @@ body {
     align-items: center;
     /* background-color: rgba(71, 162, 241, 0.454); */
     background-attachment: fixed;
-    background-image: url('images/girl3png'), url('images/image11png'), url('images/flygirl.pn'), url('images/press.png'), url('images/theweeknd3.jpg'), url('images/flysoul.png'), url('images/redflower.png');
+    background-image: url('images/girl3png'), url('images/image11png'), url('images/flygirl.png'), url('images/spacecraft.png'), url('images/theweeknd3.png'), url('images/flysoulpng'), url('images/redflower.png'), url(images/leaf.png);
     background-repeat: no-repeat;
-    background-size: 35%, 20%, 15%, 21%, 32%, 10%, 40%;
-    background-position: left 1% bottom 10%, top 50% left 2%, left 40% top 2%, left 20% bottom 20%, 100% 100%, left 20% top 5%, right 0% top 0%;
+    background-size: 35%, 20%, 15%, 45%, 32%, 10%, 40%, 50%;
+    background-position: left 1% bottom 10%, top 50% left 2%, left 40% top 2%, left 3% bottom 29%, 100% 100%, left 3% top 50%, right 0% top 0%, left top;
     /* background-position: bottom, top left, top right; */
     /* background: #0c456b83; */
     overflow: hidden;
@@ -209,8 +209,8 @@ button {
 }
 
 .btn-four {
-    background-image: url('images/girl3.png');
-    left: 9%;
-    bottom: 7%;
+    background-image: url('images/flower2.png');
+    left: 0%;
+    bottom: 5%;
     background-size: 100%;
 }

@@ -8,6 +8,9 @@ const progress = document.getElementById("progress");
 const volume = document.getElementById("volume");
 
 const songs = [
+    { name: "All The Stars", artist: "Kendrick Lamar, SZA", src: "songs/allthestars.mp3" },
+    { name: "Unforgettable", artist: "Swae Lee", src: "songs/unforgetable.mp3" },
+    { name: "Every Breath You Take", artist: "The Police", src: "songs/thekids.mp3" },
     { name: "Ordinary Life", artist: "The Weeknd", src: "songs/ordinarylife.mp3" },
     { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
     { name: "love me harder", artist: "The Weeknd, Ariana Grande", src: "songs/lovemeharder.mp3" },

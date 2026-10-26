@@ -3,8 +3,8 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
-        "page2.html"
+        "images/theweeknd3.jpg",
+        "style.css"
       ]
     }
   ],

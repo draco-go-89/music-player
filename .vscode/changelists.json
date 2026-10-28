@@ -3,12 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "songs/shutdown.mp3",
-        ".vscode/changelists.json",
         "script.js",
-        "page2.html",
-        "songs/slut.mp3",
-        "songs/tossieslide.mp3"
+        ".vscode/changelists.json"
       ]
     }
   ],

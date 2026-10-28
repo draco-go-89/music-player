@@ -38,7 +38,9 @@ const songs = [
     { name: "sdp", artist: "Travis Scott", src: "songs/spd.mp3" },
     { name: "viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     // { name: "Medicine", artist: "unknown artist//", src: "songs/medicine.mp3" },
-    { name: "In Ankhoon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" }
+    { name: "In Ankhoon Ki Masthi Ki", artist: "the joy in her eyes", src: "songs/masthiremix.mp3" },
+    { name: "Kamdev Ni Bwrla Teer", artist: "Swrjisuma", src: "songs/kamdev.mp3" },
+    { name: "Bwthwranw", artist: "Swrjisuma", src: "songs/bwthwranw.mp3" }
     // { name: "", artist: "", src: "songs/.mp3" },
 ];
 

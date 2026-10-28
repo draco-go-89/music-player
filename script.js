@@ -27,7 +27,7 @@ const songs = [
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
     { name: "the way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
     { name: "fashion killa", artist: "A$AP ROCKY", src: "songs/fashioonkilla.mp3" },
-    { name: "Shut It Down", artist: "Drake", src: "songs/shutdowwn.mp3" },
+    { name: "Shut It Down", artist: "Drake", src: "songs/shutdown.mp3" },
     { name: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
     { name: "Sticky", artist: "Drake", src: "songs/sticky.mp3" },

@@ -9,6 +9,10 @@ html {
     scroll-behavior: smooth;
 }
 
+#volume {
+    display: none;
+}
+
 body {
     height: 100dvh;
     display: flex;
@@ -118,6 +122,7 @@ button {
         transform: rotate(12deg);
     }
 }
+
 /* FROM HERE THE ABOUT POP-UP */
 /* THE BUTTON IS HIDDEN AS A WHITE PNG BESIDE THE WEEKND BOTTOM */
 .modal-backdrop {
@@ -200,7 +205,7 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    
+
     width: 120px;
     height: 140px;
 
@@ -213,4 +218,72 @@ button {
     left: 0%;
     bottom: 5%;
     background-size: 100%;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    /* SET MARGIN NEGATIVE SO THAT IT GOES UP WITH PROGRESS BAR */
+    margin-top: -16px;
+    color: black;
+    /* MARGIN LEFT RIGHT DECIDES SPACE BETWEEN */
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
+}
+
+.progress {
+    margin-top: 10px;
+    background: rgba(41, 56, 72, 0);
+}
+
+#progress {
+    width: 78%;
+    height: 6px;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background: rgba(25, 40, 53, 0.157);
+    cursor: pointer;
+    overflow: hidden;
+    
+    /* MARGIN LEFT RIGHT DECIDES SPACE BETWEEN */
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* Track */
+#progress::-webkit-slider-runnable-track {
+    height: 5px;
+    border-radius: 10px;
+}
+
+/* Thumb */
+#progress::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 1px;
+    /* height: 12px; */
+    /* border-radius: 50%; */
+
+    background: #ffffff00;
+    /* border: 2px solid #ff5100; */
+
+    margin-top: -3.5px;
+
+    box-shadow: -200px 0 0 200px red;
+}
+
+#play {
+    margin: 0 16px;
+}
+
+.controls button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    cursor: pointer;
 }

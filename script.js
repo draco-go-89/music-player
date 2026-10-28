@@ -44,7 +44,7 @@ const songs = [
     // { name: "", artist: "", src: "songs/.mp3" },
 ];
 
-let songIndex = 0;
+let songIndex = 14;
 let isPlaying = false;
 
 function loadSong(index) {
@@ -55,13 +55,13 @@ function loadSong(index) {
 
 function playSong() {
     audio.play();
-    playBtn.innerHTML = "⏸️";
+    playBtn.innerHTML = "★";
     isPlaying = true;
 }
 
 function pauseSong() {
     audio.pause();
-    playBtn.innerHTML = "▶️";
+    playBtn.innerHTML = "▶";
     isPlaying = false;
 }
 
@@ -97,7 +97,29 @@ volume.addEventListener("input", () => {
     audio.volume = volume.value;
 });
 
+audio.addEventListener("ended", nextSong);
+
 loadSong(songIndex);
+
+// SCRIPT FOR TIME UPDATE
+const current = document.getElementById("current");
+const duration = document.getElementById("duration");
+
+audio.addEventListener("timeupdate", () => {
+    const curMin = Math.floor(audio.currentTime / 60);
+    const curSec = Math.floor(audio.currentTime % 60);
+
+    current.textContent =
+        `${curMin}:${String(curSec).padStart(2, "0")}`;
+});
+
+audio.addEventListener("loadedmetadata", () => {
+    const durMin = Math.floor(audio.duration / 60);
+    const durSec = Math.floor(audio.duration % 60);
+
+    duration.textContent =
+        `${durMin}:${String(durSec).padStart(2, "0")}`;
+});
 
 // POO-UP MESSAGE
 const openBtn = document.getElementById('openAboutBtn');

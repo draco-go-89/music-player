@@ -4,7 +4,6 @@
       "name": "Default",
       "files": [
         "script.js",
-        "songs/thousandmiles.mp3",
         ".vscode/changelists.json"
       ]
     }

@@ -22,7 +22,7 @@ const songs = [
     { name: "Creepin", artist: "Metro Boomin, The Weeknd, 21 Savage", src: "songs/creepin.mp3" },
     { name: "The Hills", artist: "The Weeknd", src: "songs/thehills.mp3" },
     { name: "Trance", artist: "Metro Boomin, Travis Scott", src: "songs/trance.mp3" },
-    { name: "pray for me", artist: "The Weeknd", src: "songs/prayforme.mp3" },
+    { name: "Pray For Me", artist: "The Weeknd", src: "songs/prayforme.mp3" },
     { name: "I Was Never There", artist: "The Weekend", src: "songs/neverthere.mp3" },
     { name: "Heartless", artist: "The Weeknd, Metro Boomin", src: "songs/heartless.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },

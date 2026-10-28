@@ -3,11 +3,7 @@
     {
       "name": "Default",
       "files": [
-        "songs/flashinglights.mp3",
-        ".vscode/changelists.json",
-        "script.js",
-        "songs/allthestars.mp3",
-        "songs/afterparty.mp3"
+        "style.css"
       ]
     }
   ],

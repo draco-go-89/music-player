@@ -28,6 +28,7 @@ const songs = [
     { name: "Blinding Lights", artist: "The Weeknd", src: "songs/blinding.mp3" },
     { name: "Heartless", artist: "The Weeknd & Metro Boomin", src: "songs/heartless.mp3" },
     { name: "I Was Never There", artist: "The Weeknd", src: "songs/neverthere.mp3" },
+    { name: "Low Life", artist: "Future, The Weeknd", src: "songs/lowlife.mp3" },
     { name: "King Of The Fall", artist: "The Weeknd", src: "songs/kingofthefall.mp3" },
     { name: "Love Me Harder", artist: "The Weeknd & Ariana Grande", src: "songs/lovemeharder.mp3" },
     { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },

@@ -8,13 +8,14 @@ const progress = document.getElementById("progress");
 const volume = document.getElementById("volume");
 
 const songs = [
-    { name: "All The Stars", artist: "Kendrick Lamar, SZA", src: "songs/allthestars.mp3" },
+    { name: "Flashing Lights", artist: "Kanye West", src: "songs/flashinglights.mp3" },
     { name: "Unforgettable", artist: "Swae Lee", src: "songs/unforgetable.mp3" },
     { name: "Every Breath You Take", artist: "The Police", src: "songs/thekids.mp3" },
     { name: "Ordinary Life", artist: "The Weeknd", src: "songs/ordinarylife.mp3" },
     { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
     { name: "Love Me Harder", artist: "The Weeknd, Ariana Grande", src: "songs/lovemeharder.mp3" },
     { name: "King Of The Fall", artist: "XO The Weeknd", src: "songs/kingofthefall.mp3" },
+    { name: "After Party", artist: "The Weeknd", src: "songs/afterparty.mp3" },
     { name: "Try Me", artist: "The Weeknd", src: "songs/tryme.mp3" },
     { name: "Starboy", artist: "The Weeknd", src: "songs/starboy.mp3" },
     { name: "Blinding Lights", artist: "The Weeknd", src: "songs/blinding.mp3" },
@@ -26,9 +27,9 @@ const songs = [
     { name: "Heartless", artist: "The Weeknd, Metro Boomin", src: "songs/heartless.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
     { name: "the way life goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
-    { name: "fashion killa", artist: "A$AP ROCKY", src: "songs/fashioonkilla.mp3" },
+    { name: "Fashion Killa", artist: "A$AP ROCKY", src: "songs/fashioonkilla.mp3" },
     { name: "Shut It Down", artist: "Drake", src: "songs/shutdown.mp3" },
-    { name: "fair trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
+    { name: "Fair Trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "richbabydaddy! ", artist: "Drake & SR, SZA", src: "songs/richbabydaddy.mp3" },
     { name: "Sticky", artist: "Drake", src: "songs/sticky.mp3" },
     { name: "Redrum", artist: "21 Savage", src: "songs/redrum.mp3" },
@@ -42,7 +43,7 @@ const songs = [
     // { name: "", artist: "", src: "songs/.mp3" },
 ];
 
-let songIndex = 14;
+let songIndex = 7;
 let isPlaying = false;
 
 function loadSong(index) {

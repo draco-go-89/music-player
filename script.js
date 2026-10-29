@@ -23,7 +23,7 @@ const songs = [
     { name: "Unforgettable", artist: "Swae Lee", src: "songs/unforgetable.mp3" },
     { name: "Bwthwranw", artist: "Swrjisuma", src: "songs/bwthwranw.mp3" },
     { name: "Kamdev Ni Bwrla Teer", artist: "Swrjisuma", src: "songs/kamdev.mp3" },
-    { name: "Every Breath You Take", artist: "The Police", src: "songs/thekids.mp3" },
+    // { name: "Every Breath You Take", artist: "The Police", src: "songs/thekids.mp3" },
     { name: "After Party", artist: "The Weeknd", src: "songs/afterparty.mp3" },
     { name: "Blinding Lights", artist: "The Weeknd", src: "songs/blinding.mp3" },
     { name: "Heartless", artist: "The Weeknd & Metro Boomin", src: "songs/heartless.mp3" },

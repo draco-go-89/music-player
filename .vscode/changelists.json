@@ -3,7 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "songs/oneofthegirls.mp3",
+        "songs/lostinthefire.mp3",
+        "songs/toomanynights.mp3",
         ".vscode/changelists.json",
         "script.js"
       ]

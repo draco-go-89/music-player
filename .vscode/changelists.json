@@ -3,7 +3,9 @@
     {
       "name": "Default",
       "files": [
-        "script.js"
+        ".vscode/changelists.json",
+        "images/faces.jpg",
+        "index.html"
       ]
     }
   ],

@@ -15,7 +15,7 @@ const songs = [
     { name: "Rich Baby Daddy", artist: "Drake, Sexyy Red & SZA", src: "songs/richbabydaddy.mp3" },
     { name: "Shut It Down", artist: "Drake", src: "songs/shutdown.mp3" },
     { name: "Sticky", artist: "Drake", src: "songs/sticky.mp3" },
-    { name: "Viah", artist: "Jass Manak", src: "songs/viah.mp3" },
+    // { name: "Viah", artist: "Jass Manak", src: "songs/viah.mp3" },
     { name: "Flashing Lights", artist: "Kanye West", src: "songs/flashinglights.mp3" },
     { name: "The Way Life Goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
     { name: "Creepin", artist: "Metro Boomin, The Weeknd & 21 Savage", src: "songs/creepin.mp3" },

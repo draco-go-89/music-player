@@ -3,10 +3,9 @@
     {
       "name": "Default",
       "files": [
-        "style.css",
+        "songs/oneofthegirls.mp3",
         ".vscode/changelists.json",
-        "images/press.png",
-        "images/Autumn.jpg"
+        "script.js"
       ]
     }
   ],

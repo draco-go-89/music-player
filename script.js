@@ -34,6 +34,7 @@ const songs = [
     { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
     { name: "Ordinary Life", artist: "The Weeknd", src: "songs/ordinarylife.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
+    { name: "One Of The Girls", artist: "The Weeknd, Jennie", src: "songs/oneofthegirls.mp3" },
     { name: "Pray For Me", artist: "The Weeknd", src: "songs/prayforme.mp3" },
     { name: "Starboy", artist: "The Weeknd", src: "songs/starboy.mp3" },
     { name: "The Hills", artist: "The Weeknd", src: "songs/thehills.mp3" },

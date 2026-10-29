@@ -230,7 +230,7 @@ button {
     justify-content: space-between;
     font-size: 12px;
     /* SET MARGIN NEGATIVE SO THAT IT GOES UP WITH PROGRESS BAR */
-    margin-top: -15px;
+    margin-top: -13px;
     color: black;
     /* MARGIN LEFT RIGHT DECIDES SPACE BETWEEN */
     /* margin-left: 30px; */

@@ -3,10 +3,10 @@
     {
       "name": "Default",
       "files": [
-        "songs/lowlife.mp3",
+        "style.css",
         ".vscode/changelists.json",
-        "script.js",
-        "style.css"
+        "images/press.png",
+        "images/Autumn.jpg"
       ]
     }
   ],

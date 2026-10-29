@@ -141,6 +141,11 @@ button {
 
 .modal-content {
     background-color: #ffffff;
+    background-image: url(images/Autumn.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    z-index: -1;
     padding: 40px;
     border-radius: 3px;
     width: 90%;

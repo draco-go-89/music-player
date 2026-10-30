@@ -48,7 +48,7 @@ const songs = [
 ];
 
 
-let songIndex = 10;
+let songIndex = 9;
 let isPlaying = false;
 
 function loadSong(index) {

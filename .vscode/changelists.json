@@ -3,12 +3,9 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
         "script.js",
-        "songs/hob.mp3",
-        "songs/thetown.mp3",
-        "songs/thekids.mp3",
-        "songs/viah.mp3"
+        ".vscode/changelists.json",
+        "style.css"
       ]
     }
   ],

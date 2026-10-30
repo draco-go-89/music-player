@@ -12,7 +12,7 @@ const songs = [
     { name: "Fashion Killa", artist: "A$AP Rocky", src: "songs/fashioonkilla.mp3" },
     { name: "In Ankhoon Ki Masthi Ki", artist: "Asha Bhosle", src: "songs/masthiremix.mp3" },
     { name: "Fair Trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
-    { name: "Rich Baby Daddy", artist: "Drake, Sexyy Red & SZA", src: "songs/richbabydaddy.mp3" },
+    // { name: "Rich Baby Daddy", artist: "Drake, Sexyy Red & SZA", src: "songs/richbabydaddy.mp3" },
     { name: "Shut It Down", artist: "Drake", src: "songs/shutdown.mp3" },
     { name: "Sticky", artist: "Drake", src: "songs/sticky.mp3" },
     { name: "Flashing Lights", artist: "Kanye West", src: "songs/flashinglights.mp3" },
@@ -35,6 +35,7 @@ const songs = [
     { name: "Too Many Nights", artist: "Metro Boomin, Don Toliver, Future", src: "songs/toomanynights.mp3" },
     { name: "Niagara Falls", artist: "The Weeknd", src: "songs/niagarafalls.mp3" },
     { name: "Ordinary Life", artist: "The Weeknd", src: "songs/ordinarylife.mp3" },
+    // { name: "Call Out My Name", artist: "The Weeknd", src: "songs/calloutmyname.mp3" },
     { name: "Popular", artist: "The Weeknd & Playboi Carti", src: "songs/popular.mp3" },
     { name: "One Of The Girls", artist: "The Weeknd, Jennie", src: "songs/oneofthegirls.mp3" },
     { name: "Pray For Me", artist: "The Weeknd", src: "songs/prayforme.mp3" },
@@ -48,7 +49,7 @@ const songs = [
 ];
 
 
-let songIndex = 9;
+let songIndex = 8;
 let isPlaying = false;
 
 function loadSong(index) {

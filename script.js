@@ -145,3 +145,66 @@ window.addEventListener('click', (event) => {
         modal.style.display = 'none';
     }
 });
+
+// FOR REAL USERS IP SHOW IN VERCEL
+// fetch('/api/visit');
+
+// --- INTERACTION & EXIT TRACKER ---
+const visitStartTime = Date.now();
+let maxScrollPercent = 0;
+
+function getElapsedSeconds() {
+    return `${Math.round((Date.now() - visitStartTime) / 1000)}s`;
+}
+
+// 1. Track maximum scroll depth (%)
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+        const scrolled = Math.round((scrollTop / docHeight) * 100);
+        if (scrolled > maxScrollPercent) maxScrollPercent = Math.min(100, scrolled);
+    }
+}, { passive: true });
+
+// 2. Track clicks on links, buttons, images, or sections
+document.addEventListener('click', (e) => {
+    const el = e.target.closest('a, button, img, audio, [id], .card, .btn');
+    if (!el) return;
+
+    const label = el.innerText?.trim().slice(0, 35)
+        || el.getAttribute('href')
+        || el.getAttribute('alt')
+        || el.id
+        || el.className
+        || el.tagName;
+
+    navigator.sendBeacon('/api/visit', JSON.stringify({
+        type: 'INTERACTION',
+        action: `Clicked [${el.tagName.toLowerCase()}]: "${label}"`,
+        scrollDepth: `${maxScrollPercent}%`,
+        timeElapsed: getElapsedSeconds()
+    }));
+});
+
+// 3. Track if they play/pause your background audio
+document.addEventListener('play', (e) => {
+    const src = e.target.currentSrc?.split('/').pop() || 'audio/video';
+    navigator.sendBeacon('/api/visit', JSON.stringify({
+        type: 'INTERACTION',
+        action: `Played Media: ${src}`,
+        scrollDepth: `${maxScrollPercent}%`,
+        timeElapsed: getElapsedSeconds()
+    }));
+}, true);
+
+// 4. Track when they leave or minimize the page
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+        navigator.sendBeacon('/api/visit', JSON.stringify({
+            type: 'EXIT',
+            scrollDepth: `${maxScrollPercent}%`,
+            totalTime: getElapsedSeconds()
+        }));
+    }
+});

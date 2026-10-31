@@ -3,9 +3,10 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
         "script.js",
-        "songs/calloutmyname.mp3"
+        ".vscode/changelists.json",
+        "api/visit.js",
+        "index.html"
       ]
     }
   ],

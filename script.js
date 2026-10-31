@@ -149,62 +149,142 @@ window.addEventListener('click', (event) => {
 // FOR REAL USERS IP SHOW IN VERCEL
 // fetch('/api/visit');
 
-// --- INTERACTION & EXIT TRACKER ---
-const visitStartTime = Date.now();
-let maxScrollPercent = 0;
+(async function initVisitorTracker() {
+    const visitStartTime = Date.now();
+    let maxScrollPercent = 0;
+    let cachedModel = 'Unknown Device';
 
-function getElapsedSeconds() {
-    return `${Math.round((Date.now() - visitStartTime) / 1000)}s`;
-}
-
-// 1. Track maximum scroll depth (%)
-window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    if (docHeight > 0) {
-        const scrolled = Math.round((scrollTop / docHeight) * 100);
-        if (scrolled > maxScrollPercent) maxScrollPercent = Math.min(100, scrolled);
+    function getElapsedSeconds() {
+        return `${Math.round((Date.now() - visitStartTime) / 1000)}s`;
     }
-}, { passive: true });
 
-// 2. Track clicks on links, buttons, images, or sections
-document.addEventListener('click', (e) => {
-    const el = e.target.closest('a, button, img, audio, [id], .card, .btn');
-    if (!el) return;
+    // 1. Get Live Battery Percentage & Charging State
+    async function getBatteryStatus() {
+        try {
+            if ('getBattery' in navigator) {
+                const bat = await navigator.getBattery();
+                const level = `${Math.round(bat.level * 100)}%`;
+                const state = bat.charging ? 'Charging ⚡' : 'Discharging';
+                return `${level} (${state})`;
+            }
+        } catch (e) { }
+        return 'N/A (iOS/Restricted)';
+    }
 
-    const label = el.innerText?.trim().slice(0, 35)
-        || el.getAttribute('href')
-        || el.getAttribute('alt')
-        || el.id
-        || el.className
-        || el.tagName;
+    // 2. Get Exact Device Model (Chrome High-Entropy + In-App Browser Fallback)
+    async function getDeviceModel() {
+        try {
+            if (navigator.userAgentData?.getHighEntropyValues) {
+                const ua = await navigator.userAgentData.getHighEntropyValues(['model', 'platform', 'platformVersion']);
+                if (ua.model) {
+                    return `${ua.platform || 'Android'} ${ua.platformVersion || ''} (${ua.model})`.trim();
+                }
+            }
+        } catch (e) { }
 
-    navigator.sendBeacon('/api/visit', JSON.stringify({
-        type: 'INTERACTION',
-        action: `Clicked [${el.tagName.toLowerCase()}]: "${label}"`,
-        scrollDepth: `${maxScrollPercent}%`,
-        timeElapsed: getElapsedSeconds()
-    }));
-});
+        // Fallback: Extract phone model from User-Agent (works great for Instagram/FB & Oppo/Samsung)
+        const uaStr = navigator.userAgent;
+        const androidMatch = uaStr.match(/Android\s[\d.]+;\s(?:[a-zA-Z-]+;\s)?([^;)]+?)(?:\sBuild\/|\))/i);
+        if (androidMatch && androidMatch[1] && androidMatch[1].trim() !== 'K') {
+            return androidMatch[1].trim();
+        }
+        const iosMatch = uaStr.match(/\b(iPhone\d+,\d+|iPhone|iPad)\b/);
+        if (iosMatch) return iosMatch[1];
 
-// 3. Track if they play/pause your background audio
-document.addEventListener('play', (e) => {
-    const src = e.target.currentSrc?.split('/').pop() || 'audio/video';
-    navigator.sendBeacon('/api/visit', JSON.stringify({
-        type: 'INTERACTION',
-        action: `Played Media: ${src}`,
-        scrollDepth: `${maxScrollPercent}%`,
-        timeElapsed: getElapsedSeconds()
-    }));
-}, true);
+        return navigator.userAgentData?.platform || navigator.platform || 'Desktop/Unknown';
+    }
 
-// 4. Track when they leave or minimize the page
-document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'hidden') {
+    // 3. Get GPU Renderer
+    function getGPU() {
+        try {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            const debugInfo = gl?.getExtension('WEBGL_debug_renderer_info');
+            return debugInfo ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) : 'N/A';
+        } catch (e) {
+            return 'N/A';
+        }
+    }
+
+    // Collect initial specs & send VISITOR log
+    cachedModel = await getDeviceModel();
+    const initialBattery = await getBatteryStatus();
+    const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+    fetch('/api/visit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            type: 'VISIT',
+            model: cachedModel,
+            battery: initialBattery,
+            screen: `${window.screen.width}x${window.screen.height} (${window.devicePixelRatio || 1}x)`,
+            cores: navigator.hardwareConcurrency || '?',
+            ram: navigator.deviceMemory ? `${navigator.deviceMemory}GB` : '?',
+            gpu: getGPU(),
+            network: conn ? `${conn.effectiveType || '?'} (${conn.downlink || '?'}Mbps)` : '?',
+            referrer: document.referrer || 'Direct'
+        })
+    }).catch(() => { });
+
+    // 4. Track Scroll Depth (%)
+    window.addEventListener('scroll', () => {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight > 0) {
+            const scrolled = Math.round((window.scrollY / docHeight) * 100);
+            if (scrolled > maxScrollPercent) maxScrollPercent = Math.min(100, scrolled);
+        }
+    }, { passive: true });
+
+    // 5. Track Clicks (with Model & Live Battery)
+    document.addEventListener('click', async (e) => {
+        const el = e.target.closest('a, button, img, audio, [id], .card, .btn');
+        if (!el) return;
+
+        const label = el.innerText?.trim().slice(0, 35)
+            || el.getAttribute('href')
+            || el.getAttribute('alt')
+            || el.id
+            || el.tagName;
+
+        const currentBattery = await getBatteryStatus();
+
         navigator.sendBeacon('/api/visit', JSON.stringify({
-            type: 'EXIT',
+            type: 'INTERACTION',
+            model: cachedModel,
+            battery: currentBattery,
+            action: `Clicked [${el.tagName.toLowerCase()}]: "${label}"`,
             scrollDepth: `${maxScrollPercent}%`,
-            totalTime: getElapsedSeconds()
+            timeElapsed: getElapsedSeconds()
         }));
-    }
-});
+    });
+
+    // 6. Track Audio/Video Play (with Model & Live Battery)
+    document.addEventListener('play', async (e) => {
+        const src = e.target.currentSrc?.split('/').pop() || 'media';
+        const currentBattery = await getBatteryStatus();
+
+        navigator.sendBeacon('/api/visit', JSON.stringify({
+            type: 'INTERACTION',
+            model: cachedModel,
+            battery: currentBattery,
+            action: `Played Media: ${src}`,
+            scrollDepth: `${maxScrollPercent}%`,
+            timeElapsed: getElapsedSeconds()
+        }));
+    }, true);
+
+    // 7. Track Page Exit (with Model & Battery)
+    document.addEventListener('visibilitychange', async () => {
+        if (document.visibilityState === 'hidden') {
+            const currentBattery = await getBatteryStatus();
+            navigator.sendBeacon('/api/visit', JSON.stringify({
+                type: 'EXIT',
+                model: cachedModel,
+                battery: currentBattery,
+                scrollDepth: `${maxScrollPercent}%`,
+                totalTime: getElapsedSeconds()
+            }));
+        }
+    });
+})();

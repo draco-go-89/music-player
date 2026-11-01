@@ -9,6 +9,7 @@ const volume = document.getElementById("volume");
 
 const songs = [
     { name: "Redrum", artist: "21 Savage", src: "songs/redrum.mp3" },
+    { name: "The Way Life Goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
     { name: "Fashion Killa", artist: "A$AP Rocky", src: "songs/fashioonkilla.mp3" },
     { name: "In Ankhoon Ki Masthi Ki", artist: "Asha Bhosle", src: "songs/masthiremix.mp3" },
     { name: "Fair Trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
@@ -16,7 +17,6 @@ const songs = [
     { name: "Drivers License", artist: "Olivia Rodrigo", src: "songs/drivers.mp3" },
     { name: "Sticky", artist: "Drake", src: "songs/sticky.mp3" },
     { name: "Flashing Lights", artist: "Kanye West", src: "songs/flashinglights.mp3" },
-    { name: "The Way Life Goes", artist: "Lil Uzi Vert", src: "songs/liluzi.mp3" },
     { name: "House Of Balloons", artist: "The Weeknd", src: "songs/hob.mp3" },
     { name: "The Town", artist: "The Weeknd", src: "songs/thetown.mp3" },
     { name: "King Of The Fall", artist: "The Weeknd", src: "songs/kingofthefall.mp3" },
@@ -49,7 +49,7 @@ const songs = [
 ];
 
 
-let songIndex = 8;
+let songIndex = 9;
 let isPlaying = false;
 
 function loadSong(index) {

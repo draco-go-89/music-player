@@ -3,10 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "songs/drivers.mp3",
-        ".vscode/changelists.json",
         "script.js",
-        "songs/richbabydaddy.mp3"
+        ".vscode/changelists.json"
       ]
     }
   ],

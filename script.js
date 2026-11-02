@@ -26,7 +26,7 @@ const songs = [
     { name: "Bwthwranw", artist: "Swrjisuma", src: "songs/bwthwranw.mp3" },
     { name: "Kamdev Ni Bwrla Teer", artist: "Swrjisuma", src: "songs/kamdev.mp3" },
     { name: "After Party", artist: "The Weeknd", src: "songs/afterparty.mp3" },
-    // { name: "Blinding Lights", artist: "The Weeknd", src: "songs/blinding.mp3" },
+    { name: "Blinding Lights", artist: "The Weeknd", src: "songs/blinding.mp3" },
     { name: "Heartless", artist: "The Weeknd & Metro Boomin", src: "songs/heartless.mp3" },
     { name: "I Was Never There", artist: "The Weeknd", src: "songs/neverthere.mp3" },
     { name: "Low Life", artist: "Future, The Weeknd", src: "songs/lowlife.mp3" },

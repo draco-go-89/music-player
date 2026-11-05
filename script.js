@@ -43,8 +43,9 @@ const songs = [
     { name: "The Hills", artist: "The Weeknd", src: "songs/thehills.mp3" },
     { name: "Try Me", artist: "The Weeknd", src: "songs/tryme.mp3" },
     { name: "My Eyes", artist: "Travis Scott", src: "songs/myeyes.mp3" },
-    { name: "Sdp Interlude", artist: "Travis Scott", src: "songs/spd.mp3" }
-    // { name: "Wake Up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" },
+    { name: "Sdp Interlude", artist: "Travis Scott", src: "songs/spd.mp3" },
+    { name: "I'll Be Missing You", artist: "Diddy, Faith Evans, 112", src: "songs/illbemissingyou.mp3" },
+    { name: "Wake Up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" }
     // { name: "", artist: "", src: "songs/.mp3" },
 ];
 

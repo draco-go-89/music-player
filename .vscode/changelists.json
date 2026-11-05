@@ -3,6 +3,8 @@
     {
       "name": "Default",
       "files": [
+        "songs/illbemissingyou.mp3",
+        ".vscode/changelists.json",
         "script.js"
       ]
     }

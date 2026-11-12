@@ -15,6 +15,7 @@ const songs = [
     { name: "Fair Trade", artist: "Drake & Travis Scott", src: "songs/fairtrade.mp3" },
     { name: "Shut It Down", artist: "Drake", src: "songs/shutdown.mp3" },
     { name: "Drivers License", artist: "Olivia Rodrigo", src: "songs/drivers.mp3" },
+    { name: "I'll Be Missing You", artist: "Diddy, Faith Evans, 112", src: "songs/illbemissingyou.mp3" },
     { name: "Sticky", artist: "Drake", src: "songs/sticky.mp3" },
     { name: "Flashing Lights", artist: "Kanye West", src: "songs/flashinglights.mp3" },
     { name: "House Of Balloons", artist: "The Weeknd", src: "songs/hob.mp3" },
@@ -44,13 +45,12 @@ const songs = [
     { name: "Try Me", artist: "The Weeknd", src: "songs/tryme.mp3" },
     { name: "My Eyes", artist: "Travis Scott", src: "songs/myeyes.mp3" },
     { name: "Sdp Interlude", artist: "Travis Scott", src: "songs/spd.mp3" },
-    { name: "I'll Be Missing You", artist: "Diddy, Faith Evans, 112", src: "songs/illbemissingyou.mp3" },
     { name: "Wake Up in Japan", artist: "Post Malone & Doja Cat", src: "songs/ilikeyou.mp3" }
     // { name: "", artist: "", src: "songs/.mp3" },
 ];
 
 
-let songIndex = 9;
+let songIndex = 7;
 let isPlaying = false;
 
 function loadSong(index) {
